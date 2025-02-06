@@ -1,13 +1,103 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko>"
 <head>
-    <title>내 첫 웹페이지</title>
+<meta charset="UTF-8>"
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>오늘의 음식추천!</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>안녕하세요!</h1>
-    <p>반갑습니다.</p>
+
+    <header>
+        <h2>뭘 먹을지 모를때 사용해보세요!</h2>
+        <nav>
+            <ul>
+            <li><a href=https://www.instragram.com/w.woo_809>제작자 인스타그램</a></li>
+                <p>인스타그램 연결이 안된다면 고급을 누르고 링크에 들어가보세요</p>
+                <p>웹 아이디어를 보내주세요</p>
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <main>
+        <section>
+            <h3>반갑습니다.</h3>
+        </section>
+
+        <div class="container">
+
+        <section>
+            <h3>버튼을 눌러서 음식 추천을 받아보세요!</h3>
+            <button onclick="recommendFood()">추천 받기</button>
+            <h2 id="food-result"></h2>
+        </div>
+        </section>
+    </main>
+    
+
+
+    
+
+
+
+    <footer>
+        <p>&copy; 마음대로 사용해보세요</p>
+    </footer>
+
+    <script>
+        function recommendFood() {
+            const foods = ["김치찌개", "된장찌개", "삼겹살", "비빔밥", "치킨", "피자", "초밥", "떡볶이", "제육볶음", "돈까스", "짜장면"];
+            const randomFood = foods[Math.floor(Math.random() * foods.length)];
+            document.getElementById("food-result").innerText = "추천 음식: " + randomFood;
+        }
+    </script>
+
+    <script src="script.js"></script>
 </body>
-<h3>오랜만이네요</h3>
-<p>hello everyone nice to meet you!</p>
-<img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/474832141_568282256172551_1347309170167623397_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=107&ccb=1-7&_nc_sid=0024fc&_nc_ohc=sCkNJDMBvTEQ7kNvgHzli82&_nc_oc=AdjeMXL4DCI3DoZQn4Pv9N82KX6ukQcfe9B8kSSge1IRXp_oW-qaCnwqgbPdSPu-VMb6UFYLtoI8Gpm0kqQHBcf1&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1gHUhYG6KDbL7C2efN8aCuoYaWS2yn0Xj0P2-4la4ViL-w&oe=67CAE5A5" alt="이미지" width="900" height="900">
 </html>
+body{
+    background-color: white;
+}
+h2{
+    color: black;
+}
+h3{
+    color: black;
+}
+p{
+    color: black;
+}
+h2{
+    text-align: center;
+}
+h3{
+    text-align: center;
+}
+p{
+    text-align: center;
+}
+li{
+    text-align: center;
+}
+.container{
+    text-align: center;
+}
+h2{
+    font-size: xx-large;
+}
+h3{
+    font-size: xx-large;
+}
+p{
+    font-size: x-large;
+}
+li{
+    font-size: x-large;
+}
+button{
+    width: 150px;
+    height: 50px;
+    font-size: 16px;
+}
